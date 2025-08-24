@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PDF Merge — Free Online Tool</title>
+  <meta name="description" content="Merge multiple PDF files into one. Free, fast, and private." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>PDF Merge</h1>
+    <p class="subtitle">Combine multiple PDFs into a single file — free & fast.</p>
+  </header>
+
+  <main class="container">
+    <section class="uploader" id="dropzone">
+      <input type="file" id="fileInput" accept="application/pdf" multiple hidden />
+      <div class="drop-area" id="dropArea">
+        <p class="big">Drag & drop PDFs here</p>
+        <p>or</p>
+        <button id="chooseBtn">Choose Files</button>
+        <p class="hint">Tip: Select <strong>2 or more</strong> PDFs. You can reorder before merging.</p>
+      </div>
+      <ul id="fileList" class="file-list"></ul>
+      <div class="actions">
+        <button id="mergeBtn" disabled>Merge PDFs</button>
+        <button id="clearBtn" class="secondary" disabled>Clear</button>
+      </div>
+      <p id="status" class="status"></p>
+    </section>
+
+    <section class="faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Are my files safe?</summary>
+        <p>Your files are processed in memory and not stored on disk. No data is saved on the server.</p>
+      </details>
+      <details>
+        <summary>File size limits?</summary>
+        <p>Up to 20 files, max 20MB each (you can increase this later in <code>server.js</code>).</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="year"></span> PDF Merge • <a href="https://">YourBrand</a></p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
